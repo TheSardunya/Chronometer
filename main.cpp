@@ -47,7 +47,7 @@ int main(int argc, char* argv[]){
 		auto strt = steady_clock::now();
 		char option = getChar();
 		if(option == 't'){pause = true;}
-		
+		else if(option == 'q'){exit(0);}
 		auto end = steady_clock::now();
 		auto duration = duration_cast<seconds>(end - strt).count();
 		cout << stations[i] << "  " << duration << " sn.\n";
@@ -59,7 +59,7 @@ int main(int argc, char* argv[]){
 		auto strt = steady_clock::now();
 		char option = getChar();
 		if(option == 't'){pause = true;}
-		
+		else if(option == 'q'){exit(0);}
 		auto end = steady_clock::now();
 		auto duration = duration_cast<seconds>(end - strt).count();
 		cout << stations[i] << "  " << duration << " sn.\n";
