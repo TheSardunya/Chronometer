@@ -1,6 +1,5 @@
 #include <iostream>
 #include <chrono>
-#include <ncurses.h>
 #include <vector>
 #include <fstream>
 #include <string>
@@ -8,8 +7,10 @@ using namespace std;
 using namespace std::chrono;
 #ifdef Windows_NT
 #define CLS "cls"
+#include <curses.h>
 #else
 #define CLS "clear"
+#include <ncurses.h>
 #endif
 char getChar()
 {
